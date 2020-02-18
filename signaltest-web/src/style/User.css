@@ -1,8 +1,36 @@
 .content{
-  width: 100%;
-  margin-top: 40%;
-  text-align: center;
+  /*width: 100%;*/
+  /*height: auto;*/
+  /*margin-top: 150px;*/
+  /*text-align: center;*/
+  margin: 0;
+  padding: 0;
 }
+.top-div{
+  width: 112%;
+  height: 67px;
+  line-height: 67px;
+  margin-top: -20px;
+  margin-left: -34px;
+  line-height: 40px;
+  text-align: left;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #37B4CA;
+}
+.top-img{
+  width: 36%;
+  height: 0;
+  margin: 16px;
+}
+.top-info{
+  width:-1px;
+  height: 40px;
+  margin: 16px;
+  line-height: 40px;
+}
+/*整体div*/
 .register-div{
   width: 80%;
   height: 40px;
@@ -20,8 +48,9 @@
   float: left;
   text-align: right;
 }
+/*输入框div*/
 .input-css{
-  width: 80%;
+  width: 90%;
   float: left;
   margin-left: 5%;
   height: 37px;
@@ -32,6 +61,7 @@
   background-color: #efefef;
 
 }
+/*验证码输入框*/
 .imgCode-css{
   width: 100%;
   float: left;
@@ -44,6 +74,7 @@
   background-color: #efefef;
 
 }
+/*输入框*/
 .inputCode{
   width: 30%;
   float: left;
@@ -55,6 +86,19 @@
   font-size: 16px;
   background-color: #efefef;
 }
+/*密码输入框样式*/
+.inputPassword{
+  width: 60%;
+  float: left;
+  margin-left: 5%;
+  height: 37px;
+  line-height: 37px;
+  border:0px;
+  color: #333333;
+  font-size: 16px;
+  background-color: #efefef;
+}
+/*图片验证码*/
 .imgCode{
   width: 50%;
   float: right;
@@ -66,6 +110,19 @@
   font-size: 16px;
   background-color: #efefef;
 }
+/*图片显示隐藏样式*/
+.imgSee{
+  width: 15%;
+  float: right;
+  margin-left: 5%;
+  height: 37px;
+  line-height: 37px;
+  border:0px;
+  color: #333333;
+  font-size: 16px;
+  background-color: #efefef;
+}
+/*按钮样式*/
 .button{
   height: 40px;
   width: 80%;

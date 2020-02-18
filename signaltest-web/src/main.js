@@ -3,10 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import axios from 'axios'
-
+import Axios from 'axios'
+import toastRegistry from './toast/index'
+import layer from 'vue-layer'
+Vue.prototype.$layer = layer(Vue);
+Vue.use(toastRegistry)
+Vue.prototype.$axios = Axios
 Vue.config.productionTip = false
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -14,3 +17,8 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+// Axios.defaults.baseURL='http://192.168.0.103:9099'  //设置公共路径
+Axios.defaults.baseURL='http://192.168.1.111:9099'  //设置公共路径
+Axios.defaults.timeout=50000  //请求超时时间
+Axios.defaults.headers.post['Content-Type']='application/json;charset=UTF-8'
+
