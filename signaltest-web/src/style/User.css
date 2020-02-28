@@ -6,6 +6,16 @@
   margin: 0;
   padding: 0;
 }
+p {
+  padding: 0 5px;
+  color: rgba(107, 107, 107, 1);
+  font-size: 12px;
+}
+p.selected {
+  background-color: rgba(107, 107, 107, 1);
+  color: white;
+}
+
 .top-div{
   width: 112%;
   height: 67px;
@@ -141,3 +151,4 @@
 .button:active {
   background-color:#37a3b9;
 }
+

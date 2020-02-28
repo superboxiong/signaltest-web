@@ -1,7 +1,7 @@
 <template>
   <div class="app-toast"
        v-if="isShow"
-       :class="{'info': type=== 'info','success': type=== 'success','wraning': type=== 'wraning','danger': type=== 'danger'}">{{text}}</div>
+       :class="{'info': type=== 'info','success': type=== 'success','warning': type=== 'wraning','danger': type=== 'danger'}">{{text}}</div>
 </template>
 <style scoped>
   .app-toast {
@@ -20,7 +20,7 @@
   .success {
     background: #00ee6b;
   }
-  .wraning {
+  .warning {
     background: #eea300;
   }
   .danger {

@@ -12,8 +12,8 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {  //前后端分离，解决跨域问题
       'api':{
-        // target:'http://192.168.0.103:9099', //后端服务器地址和端口
-        target:'http://192.168.1.111:9099', //后端服务器地址和端口
+        target:'http://192.168.0.102:9099', //后端服务器地址和端口
+        // target:'http://192.168.1.111:9099', //后端服务器地址和端口
         changeOrigin: true,//允许跨域
         pathRewrite: {
           '^/api': '' //这个是定义要访问的路径，名字随便写
@@ -22,8 +22,9 @@ module.exports = {
     },
 
     // Various Dev Server settings
-    // host: '192.168.0.103', // can be overwritten by process.env.HOST
-    host: '192.168.1.111', // can be overwritten by process.env.HOST
+    // host: '192.168.0.102', // can be overwritten by process.env.HOST
+    host: '192.168.199.151', // can be overwritten by process.env.HOST
+    // host: '192.168.1.111', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

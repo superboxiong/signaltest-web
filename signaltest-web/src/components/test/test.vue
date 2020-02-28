@@ -1,39 +1,114 @@
+<!--<template>-->
+<!--<div style="border-color: #37a3b9">-->
+  <!--<div id="trigger4" style="width: 100px;height: 100px">ssssss</div> &lt;!&ndash;页面中别漏了这个trigger&ndash;&gt;-->
+
+<!--</div>-->
+
+
+<!--</template>-->
+
+<!--<style></style>-->
+
+<!--<script>-->
+  <!--import MobileSelect from 'mobile-select'-->
+  <!--export default {-->
+    <!--mounted() {-->
+      <!--var mobileSelect4 = new MobileSelect({-->
+        <!--trigger: "#trigger4",-->
+        <!--title: "区域类型",-->
+        <!--wheels: [-->
+          <!--{data: ["商业楼宇","学校校区","住宅小区","酒店宾馆","事业单位"]}-->
+        <!--],-->
+        <!--callback:function(indexArr, data){-->
+          <!--console.log(data);-->
+        <!--}-->
+      <!--});-->
+    <!--}-->
+  <!--}-->
+<!--</script>-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--<template>-->
+  <!--<div class="hello">-->
+    <!--<button @click="toggleModal">打开Modal对话框</button>-->
+    <!--<Modal v-show="showModal" v-on:closeme="closeme"></Modal>-->
+  <!--</div>-->
+<!--</template>-->
+
+<!--<script>-->
+  <!--import Modal from './Modal';-->
+  <!--export default {-->
+    <!--name: 'HelloWorld',-->
+    <!--data () {-->
+      <!--return {-->
+        <!--showModal:true-->
+      <!--}-->
+    <!--},-->
+    <!--components:{-->
+      <!--Modal-->
+    <!--},-->
+    <!--methods:{-->
+      <!--toggleModal:function(){-->
+        <!--this.showModal = !this.showModal;-->
+      <!--},-->
+      <!--closeme:function(){-->
+        <!--this.showModal = !this.showModal;-->
+      <!--}-->
+    <!--}-->
+  <!--}-->
+<!--</script>-->
+
+<!--&lt;!&ndash; Add "scoped" attribute to limit CSS to this component only &ndash;&gt;-->
+<!--<style scoped>-->
+  <!--h1, h2 {-->
+    <!--font-weight: normal;-->
+  <!--}-->
+  <!--ul {-->
+    <!--list-style-type: none;-->
+    <!--padding: 0;-->
+  <!--}-->
+  <!--li {-->
+    <!--display: inline-block;-->
+    <!--margin: 0 10px;-->
+  <!--}-->
+  <!--a {-->
+    <!--color: #42b983;-->
+  <!--}-->
+<!--</style>-->
+
+<!--////////////////////////////////////////////////////////////////-->
 <template>
 
-    <div>
-      <input type="text" v-if="pwdType" v-model="eyeTxt" />
-      <input type="password" placeholder="输入新密码" v-model="eyeTxt" v-else />
-      <img :src="seen ? seenImg : unseenImg" @click="changeType()" v-on:mouseover="hoverEye" v-on:mouseout="outEye" class="icon-eye" />
-    </div>
+  <div @click="test">
+     test
+    <Pickers v-show="isShow" v-on:closeme="closeme"></Pickers>
+  </div>
 
 </template>
 
 <style></style>
 
 <script>
-
-    export default {
-      data() {
-        return {
-          seen: "",
-          unseenImg: require("../../assets/see.png"),   //看不见密码时小眼睛的显示图片地址
-          seenImg: require("../../assets/see.png"),   //看得见密码时小眼睛的显示图片地址
-          eyeTxt: "",
-          pwdType: false   //此时文本框隐藏，显示密码框
-        };
-      },
-      methods: {
-        changeType: function() {
-          this.seen = !this.seen;   //小眼睛的变化
-          this.pwdType = !this.pwdType;   //跟着小眼睛变化，密码框隐藏，显示文本框 内容就显示了
-        },
-        hoverEye: function(event) {
-          this.seen = !this.seen;
-        },
-        outEye: function(event) {
-          this.seen = !this.seen;
-        }
+  import Pickers from './pickersTest'
+  export default {
+    components:{
+      Pickers
+    },
+    data() {
+      return {
+        isShow:false
       }
-    };
+    },
+    methods:{
+      test:function () {
+        alert("cccccc")
+        this.isShow=!this.isShow
+        console.log(this.isShow)
+      },
+      closeme:function () {
+        this.isShow=!this.isShow
+        console.log(this.isShow)
+      }
+    }
+  }
 
 </script>
